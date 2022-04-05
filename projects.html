@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap');
+    </style> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        @media(min-width:768px){
+            .footer{
+                margin-top: 700px;
+            }
+        }
+         
+
+        @media(max-width:480px){
+            .footer{
+                margin-top: 850px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar" id="myTopnav">
+
+
+        <div class="menu-btn" id="button1">
+            <div class="menu-btn__burger"></div>
+        </div>
+
+        <nav>
+
+            
+
+            <div class="link" id="linkl" style="display:none">
+                <ul>
+                    <li>
+                        <a id="new" href="index.html">ABOUT ME</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a id="new" href="projects.html">PROJECTS</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a id="new" href="contact.html">CONTACT ME</a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <div class="link1" id="linkl1">
+                <ul>
+                    <li>
+                        <a id="new" href="index.html">ABOUT ME</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a id="new" href="projects.html">PROJECTS</a>
+                    </li>
+                    <hr>
+                    <li>
+                        <a id="new" href="contact.html">CONTACT ME</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+    </div>
+
+    <div class="container">
+        
+        <div class="testimonial">
+           <div class="slide-row" id="slide">
+            <div class="slide-col">
+                <div class="user-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique leo ut nunc dignissim, bibendum mollis quam ullamcorper. 
+                    </p>
+                </div>
+                <div class="user-img">
+                    <img src="img1.jpg">
+                </div>
+            </div>
+    
+            <div class="slide-col">
+                <div class="user-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique leo ut nunc dignissim, bibendum mollis quam ullamcorper. 
+                    </p>
+                </div>
+                <div class="user-img">
+                    <img src="img2.jpg">
+                </div>
+            </div>
+    
+            <div class="slide-col">
+                <div class="user-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique leo ut nunc dignissim, bibendum mollis quam ullamcorper. 
+                    </p>
+                </div>
+                <div class="user-img">
+                    <img src="img3.jpg">
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+
+    <div class="footer" id="foot">
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin" target="_blank"></a>
+        <a href="#" class="fa fa-github" target="_blank"></a>
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    <script>
+        $(".menu-btn").click(function () {
+            $(".link").slideToggle();
+        });
+
+
+        $(".link").click(function () {
+            $(".link").slideToggle();
+            $(".menu-btn").removeClass("open");
+            menuOpen = false;
+        });
+
+
+        const menuBtn = document.querySelector('.menu-btn');
+        let menuOpen = false;
+        menuBtn.addEventListener('click', () => {
+            if (!menuOpen) {
+                menuBtn.classList.add('open');
+                menuOpen = true;
+            } else {
+                menuBtn.classList.remove('open');
+                menuOpen = false;
+            }
+        });
+    </script>
+
+
+    <!-- <script>
+        var btn = document.getElementsByClassName("btn");
+        var slide = document.getElementById("slide");
+
+        btn[0].onclick = function(){
+            slide.style.transform = "translateX(0px)";
+            for (let index = 0; index < 3; index++) {
+                btn[index].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[1].onclick = function(){
+            slide.style.transform = "translateX(-800px)";
+            for (let index = 0; index < 3; index++) {
+                btn[index].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+        btn[2].onclick = function(){
+            slide.style.transform = "translateX(-1600px)";
+            for (let index = 0; index < 3; index++) {
+                btn[index].classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+    </script> -->
+
+   
+    
+</body>
+</html>
