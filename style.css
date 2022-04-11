@@ -1,8 +1,16 @@
-body{
+/* GENERAL STUFF */
+
+body {
     margin: 0px;
     padding: 0px;
 }
 
+p {
+    font-size: large;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
 
 
@@ -97,29 +105,33 @@ body{
 
 
 
-
+/* SLIDE ANIMATIONS */
 
 @keyframes slideInFromLeft {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 
 @keyframes slideInFromBottom {
     0% {
-      transform: translateY(100%);
+        transform: translateY(100%);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-}  
+}
 
 
-.new{
+
+/* DOWNWARDS ARROW */
+.new {
     color: rgb(0, 13, 255);
     font-size: 60px;
     margin-top: 30px;
@@ -127,15 +139,17 @@ body{
     animation: 1s ease-out 0s 1 slideInFromBottom;
 }
 
-.new:hover{
+.new:hover {
     color: rgb(81, 90, 249);
 }
 
 
 
+
+
 /* FOR NAVBAR ONLY */
 nav {
-    background-image: linear-gradient(white,rgb(206, 203, 203));
+    background-image: linear-gradient(white, rgb(206, 203, 203));
     margin: 0;
     height: 45px;
 
@@ -168,24 +182,26 @@ a {
     overflow: hidden;
     position: relative;
     display: inline-block;
-  }
-  
-  .navLink::before,
-  .navLink::after {
-   content: '';
+}
+
+.navLink::before,
+.navLink::after {
+    content: '';
     position: absolute;
     width: 100%;
     left: 0;
-  }
-  .navLink::before {
+}
+
+.navLink::before {
     background-color: rgb(35, 44, 54);
     height: 2px;
     bottom: 0;
     transform-origin: 100% 50%;
     transform: scaleX(0);
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  .navLink::after {
+}
+
+.navLink::after {
     content: attr(data-replace);
     height: 100%;
     top: 0;
@@ -193,31 +209,25 @@ a {
     transform: translate3d(200%, 0, 0);
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
     color: rgb(35, 44, 54);
-  }
-  
-  .navLink:hover::before {
+}
+
+.navLink:hover::before {
     transform-origin: 0% 50%;
     transform: scaleX(1);
-  }
-  .navLink:hover::after {
+}
+
+.navLink:hover::after {
     transform: translate3d(0, 0, 0);
-  }
-  
-  .navLink span {
+}
+
+.navLink span {
     display: inline-block;
     transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
-  }
-  
-  .navLink:hover span {
+}
+
+.navLink:hover span {
     transform: translate3d(-200%, 0, 0);
-  }
-  
-
-
-
-
-
-
+}
 
 
 
@@ -240,10 +250,6 @@ a {
 #times {
     display: none;
 }
-
-
-
-
 
 
 .navbar {
@@ -381,21 +387,23 @@ a {
 
 
 
-.grid1{
+/* PAGE-1 */
+
+.grid1 {
     display: flex;
     flex-wrap: nowrap;
     margin-top: 70px;
     margin-bottom: 150px;
 }
 
-.grid1 div{
+.grid1 div {
     width: 50%;
     text-align: center;
 }
 
 
 
-.name{
+.name {
     margin-top: 100px;
     margin-left: 140px;
     font-size: 100px;
@@ -406,7 +414,7 @@ a {
 }
 
 
-.profileIMG{
+.profileIMG {
     width: 500px;
     margin-top: 0px;
     border-radius: 15px;
@@ -419,12 +427,79 @@ a {
 
 
 
+/* PAGE-2 */
+
+.slide-row {
+    display: flex;
+    width: 2400px;
+    transition: 0.5s;
+}
+
+.slide-col {
+    width: 800px;
+    height: 400px;
+    position: relative;
+}
+
+.user-img {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    height: 100%;
+}
+
+.user-img img {
+    height: 90%;
+    border-radius: 10px;
+}
+
+.user-text {
+    background: rgb(245, 195, 239);
+    width: 520px;
+    height: 270px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.container {
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* box-shadow: inset -2px 0px 3px rgb(145, 148, 151); */
+}
+
+.testimonial {
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+
+
+
+
+
+
+
+
+/* PAGE-3 */
+
 .div4 {
     margin-top: 80px;
 }
 
-.div4 h2{
-    font-size: 70px; 
+.div4 h2 {
+    font-size: 70px;
     margin-bottom: 20px;
     /* color: rgb(72, 72, 72); */
     text-align: center;
@@ -486,66 +561,14 @@ textarea {
 
 
 
-.slide-row{
-    display: flex;
-    width: 2400px;
-    transition: 0.5s;
-}
 
-.slide-col{
-    width: 800px;
-    height: 400px;
-    position: relative;
-}
 
-.user-img{
-    position: absolute;
-    top: 0;
-    right: 30px;
-    height: 100%;
-}
 
-.user-img img{
-    height: 90%;
-    border-radius: 10px;
-}
-
-.user-text{
-    background:rgb(245, 195, 239);
-    width: 520px;
-    height: 270px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border-radius: 10px;
-    padding: 20px;
-    box-sizing:border-box;
-    z-index: 2;
-}
-
-.container{
-    width: 800px;
-    height: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    /* box-shadow: inset -2px 0px 3px rgb(145, 148, 151); */
-}
-
-.testimonial{
-    height: 100%;
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden; 
-}
+/* FOOTER & FONTAWESOME ICONS */
 
 .footer {
     background-color: rgb(66, 66, 66);
     text-align: center;
-    /* margin-top: 700px; */
-    /* position: relative; */
 }
 
 
@@ -593,12 +616,6 @@ textarea {
     color: white;
 }
 
-p{
-    font-size: large;
-    font-weight: 600;
-    line-height: 30px;
-    font-family: 'Josefin Sans', sans-serif;
-}
 
 
 
@@ -612,43 +629,44 @@ p{
 
 
 
+/* GENERAL MEDIA QUERIES */
 
-@media(max-width : 480px){
+@media(max-width : 480px) {
 
-    .new{
+    .new {
         display: none;
     }
 
-    .container{
+    .container {
         width: 380px;
     }
 
-    .user-text{
+    .user-text {
         width: 270px;
     }
 
-    .slide-row{
+    .slide-row {
         width: 1600px;
     }
 
-    .grid1{
+    .grid1 {
         flex-direction: column;
     }
 
-    .profileIMG{
-        width:300px;
+    .profileIMG {
+        width: 300px;
     }
 
-    .name{
-        margin : 0px auto 100px auto;
+    .name {
+        margin: 0px auto 100px auto;
         font-size: 100px;
     }
 
-   .grid1 div{
-       width: 100%;
-   }
+    .grid1 div {
+        width: 100%;
+    }
 
-   .type1,
+    .type1,
     .type2 {
 
         width: 65%;
@@ -659,5 +677,5 @@ p{
         width: 65%;
     }
 
-    
+
 }
