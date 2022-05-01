@@ -638,15 +638,20 @@ textarea {
     }
 
     .container {
-        width: 380px;
+        width: 356px;
     }
 
     .user-text {
         width: 270px;
+        left : 10px;
+    }
+    
+    .user-img{
+        right : 100px;
     }
 
     .slide-row {
-        width: 1600px;
+        width: 1800px;
     }
 
     .grid1 {
